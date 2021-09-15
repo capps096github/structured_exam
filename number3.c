@@ -14,6 +14,7 @@ int main()
 
   printf("\nInput Your Frequency and Period:\n\n");
 
+  // capture
   for (int i = 0; i < ARRAY_SIZE; i++)
   {
     printf("FREQUENCY: ");
@@ -24,6 +25,7 @@ int main()
     printf("\n");
   }
 
+  // print
   printf("Period(x)     Frequency(f)\n");
   for (int y = 0; y < ARRAY_SIZE; y++)
   {
@@ -39,7 +41,7 @@ float calculateMean()
 {
 
   float totalfrequencyXProduct = 0, totalFrequency = 0, mean;
-
+  // mean
   for (int i = 0; i < ARRAY_SIZE; i++)
   {
     totalfrequencyXProduct += (frequency[i] * periodOfBreath[i]);

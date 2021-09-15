@@ -1,9 +1,9 @@
 #include <stdio.h>
-// number of time to do the experiment
-#define ARRAY_SIZE 2
+// number of times to do the experiment
+#define NUM_OF_TIMES 4
 
-int frequency[ARRAY_SIZE];
-float periodOfBreath[ARRAY_SIZE];
+int frequency[NUM_OF_TIMES];
+float periodOfBreath[NUM_OF_TIMES];
 
 float calculateMean();
 
@@ -15,7 +15,7 @@ int main()
   printf("\nInput Your Frequency and Period:\n\n");
 
   // capture
-  for (int i = 0; i < ARRAY_SIZE; i++)
+  for (int i = 0; i < NUM_OF_TIMES; i++)
   {
     printf("FREQUENCY: ");
     scanf("%d", &frequency[i]);
@@ -27,7 +27,7 @@ int main()
 
   // print
   printf("Period(x)     Frequency(f)\n");
-  for (int y = 0; y < ARRAY_SIZE; y++)
+  for (int y = 0; y < NUM_OF_TIMES; y++)
   {
     printf("%.1f                %d\n", periodOfBreath[y], frequency[y]);
   }
@@ -42,7 +42,7 @@ float calculateMean()
 
   float totalfrequencyXProduct = 0, totalFrequency = 0, mean;
   // mean
-  for (int i = 0; i < ARRAY_SIZE; i++)
+  for (int i = 0; i < NUM_OF_TIMES; i++)
   {
     totalfrequencyXProduct += (frequency[i] * periodOfBreath[i]);
     totalFrequency += frequency[i];
